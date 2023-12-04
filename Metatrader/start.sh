@@ -28,8 +28,9 @@ if [ -e "$mt5exe" ]; then
     echo "MT5 is installed"
     # Delete MT5 setup file
     rm -f /config/.wine/drive_c/mt5setup.exe
-    # run "wine terminal64.exe"
-    wine "$mt5exe"
+    # run mt5 with portable mode, to centralize app data inside mt5 install folder too
+    # run `wine "terminal64.exe" "/portable"`
+    wine "$mt5exe" "/portable"
 else
     echo "File {$mt5exe} does not exist yet. This is probably caused by an installation error. MT5 cannot run"
 fi
