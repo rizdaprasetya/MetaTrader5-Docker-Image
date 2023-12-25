@@ -20,8 +20,8 @@ COPY /Metatrader /Metatrader
 RUN chmod +x /Metatrader/start.sh
 COPY /root /
 
-# remove sudo
-RUN apk del sudo
+# remove sudo, commented out because need sudo to chown mounted volume folder
+# RUN apk del sudo
 
 # ports and volumes
 EXPOSE 3000
