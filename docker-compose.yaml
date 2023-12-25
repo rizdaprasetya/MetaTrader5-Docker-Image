@@ -6,8 +6,7 @@ services:
     image: gmag11/metatrader5_vnc
     container_name: mt5
     volumes:
-      - "./config:/config"
-      - "./PersistedData/MetaTrader5App:/config/.wine/drive_c/Program Files/MetaTrader 5"
+      - ./config:/config
     ports:
       - 3000:3000
     env_file:
