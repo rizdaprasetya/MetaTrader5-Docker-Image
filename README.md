@@ -20,7 +20,8 @@ This project provides a Docker image for running MetaTrader5 with remote access 
 git clone https://github.com/gmag11/MetaTrader5-Docker-Image
 cd MetaTrader5-Docker-Image
 ```
-2. Create a new empty file named `.env` (or rename `.env.example` to `.env`).
+2. Create a new empty file named `.env`. 
+    - e.g. by running command `touch .env` (or rename `.env.example` to `.env`).
 3. A convenient way to run and manage the container is by running it via Docker Compose:
 ```bash
 docker compose up --build -d
