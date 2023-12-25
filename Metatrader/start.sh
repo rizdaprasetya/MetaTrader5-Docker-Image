@@ -6,6 +6,7 @@ current_user=$(whoami)
 sudo chown -R $current_user:$current_user /config/.wine
 
 mt5exe='/config/.wine/drive_c/Program Files/MetaTrader 5/terminal64.exe'
+mt4exe='/config/.wine/drive_c/Program Files/MetaTrader 4/terminal.exe'
 WINEPREFIX=/config/.wine
 
 # Test if Wine Mono installed, then skip, else install it
@@ -31,7 +32,7 @@ else
     wait
 fi
 
-# Check that file exists now
+# Check that mt5 file exists now
 if [ -e "$mt5exe" ]; then
     echo "MT5 is installed"
     # Delete MT5 setup file
@@ -41,4 +42,14 @@ if [ -e "$mt5exe" ]; then
     wine "$mt5exe" "/portable"
 else
     echo "File {$mt5exe} does not exist yet. This is probably caused by an installation error. MT5 cannot run"
+fi
+
+# Check if optionally mt4 file exists
+if [ -e "$mt4exe" ]; then
+    echo "MT4 files exists"
+    # run mt5 with portable mode, to centralize app data inside mt5 install folder too
+    # run `wine "terminal.exe" "/portable"`
+    wine "$mt4exe" "/portable"
+else
+    echo "Optional file {$mt4exe} does not exist yet. This is probably you don't want / put the optional MT4 file. MT4 will not run"
 fi

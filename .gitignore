@@ -9,3 +9,4 @@ config/.wine/drive_c/*
 !config/.wine/drive_c/Program Files
 config/.wine/drive_c/Program Files/*
 !config/.wine/drive_c/Program Files/MetaTrader 5
+!config/.wine/drive_c/Program Files/MetaTrader 4
