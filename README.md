@@ -5,6 +5,7 @@ This project provides a Docker image for running MetaTrader5 with remote access 
 ## Features
 
 - Run MetaTrader5 in an isolated environment.
+    - Optionally MetaTrader4 is also supported, but you have to put the file manually.
 - Remote access to MetaTrader5 interface via an integrated VNC client accessible through a web browser.
 - Built on the reliable and secure KasmVNC project.
 
@@ -95,6 +96,9 @@ This is useful for (example) use cases of:
 <item label="Metatrader 4" icon="/config/.wine/drive_c/Program Files/MetaTrader 4/Terminal.ico"><action name="Execute"><command>/usr/bin/wine "/config/.wine/drive_c/Program Files/MetaTrader 4/terminal.exe" "/portable"</command></action></item>
 ...
 ```
+
+#### MetaTrader 4
+- Optionally MetaTrader4 is currently already supported, but you have to put the file manually within folder `./config/.wine/drive_c/Program Files/MetaTrader 4`, ignore it if you don't need it.
 
 ## config Folder
 (After running the container at least once) Within this repo folder there will be `./config` folder. Which is a persisted folder from `/config` root folder within the container, is contains a lot more. Like the `.wine` folder (Note: Wine is the emulator used on linux to run Windows apps), where Windows app emulated files is stored. Which again you can also find the MT5 install folder in `./config/.wine/drive_c/Program Files/MetaTrader 5` (though a bit longer to access than `./PersistedData` folder above).
