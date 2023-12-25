@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Determine the current user
+current_user=$(whoami)
+# Change ownership of the Wine folder to the current user
+sudo chown -R $current_user:$current_user /config/.wine
+
 mt5exe='/config/.wine/drive_c/Program Files/MetaTrader 5/terminal64.exe'
 WINEPREFIX=/config/.wine
 
