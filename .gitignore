@@ -1,5 +1,11 @@
 
 .devcontainer/
 .env
-config/
+config/*
+!config/.wine
+config/.wine/*
+!config/.wine/drive_c
+config/.wine/drive_c/*
+!config/.wine/drive_c/Program Files
+config/.wine/drive_c/Program Files/*
 !config/.wine/drive_c/Program Files/MetaTrader 5
