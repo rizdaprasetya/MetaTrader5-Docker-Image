@@ -4,5 +4,7 @@
 <item label="xterm" icon="/usr/share/pixmaps/xterm-color_48x48.xpm"><action name="Execute"><command>/usr/bin/xterm</command></action></item>
 <item label="Metatrader 5" icon="/config/.wine/drive_c/Program Files/MetaTrader 5/Terminal.ico"><action name="Execute"><command>/usr/bin/wine "/config/.wine/drive_c/Program Files/MetaTrader 5/terminal64.exe" "/portable"</command></action></item>
 <item label="Metatrader 4" icon="/config/.wine/drive_c/Program Files/MetaTrader 4/terminal.ico"><action name="Execute"><command>/usr/bin/wine "/config/.wine/drive_c/Program Files/MetaTrader 4/terminal.exe" "/portable"</command></action></item>
+<item label="Explorer via Wine" icon="/usr/share/pixmaps/xterm-color_32x32.xpm"><action name="Execute"><command>/usr/bin/wine "explorer"</command></action></item>
+<item label="Top (task manager)" icon="/usr/share/pixmaps/xterm-color_32x32.xpm"><action name="Execute"><command>/usr/bin/xterm -e "top -e=m -E=m"</command></action></item>
 </menu>
 </openbox_menu>
